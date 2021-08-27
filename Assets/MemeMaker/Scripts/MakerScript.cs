@@ -77,6 +77,8 @@ namespace MemeMaker.Scripts
                 int rand = UnityEngine.Random.Range(0, _accessories[i].m_textures.Length+1);
                 MakeAccessory(i,rand);
             }
+            if (m_background && m_palette)
+                SetBackgroundColor();
         }
 
         int CalculatePossiblePermutations(int[] accessoryCountPerArea)
@@ -136,10 +138,8 @@ namespace MemeMaker.Scripts
                 }
 
                 if (m_background && m_palette)
-                {
-                    int r = UnityEngine.Random.Range(0, m_palette.width);
-                    m_background.color = m_palette.GetPixel(r, 0);
-                }
+                    SetBackgroundColor();
+                
                 yield return new WaitForEndOfFrame();
                 ScreenCapture.CaptureScreenshot("screenshots/" +permutation+".png");
             }
@@ -163,6 +163,12 @@ namespace MemeMaker.Scripts
                 m_images[slot].texture = null;
                 m_images[slot].enabled = false;
             }
+        }
+
+        void SetBackgroundColor()
+        {
+            int r = UnityEngine.Random.Range(0, m_palette.width);
+            m_background.color = m_palette.GetPixel(r, 0);
         }
     }
 

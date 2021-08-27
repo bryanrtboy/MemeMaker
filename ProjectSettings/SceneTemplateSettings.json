@@ -143,6 +143,13 @@
         },
         {
             "userAdded": false,
+            "type": "UnityEngine.Texture2D",
+            "ignore": false,
+            "defaultInstantiationMode": 0,
+            "supportsModification": true
+        },
+        {
+            "userAdded": false,
             "type": "UnityEngine.Timeline.TimelineAsset",
             "ignore": false,
             "defaultInstantiationMode": 0,
