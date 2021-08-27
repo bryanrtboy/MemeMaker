@@ -1,4 +1,4 @@
-![Sample Animation](sample.gif)
+![Sample Animation](sample2.gif)
 
 # MemeMaker
 A Unity project to generate unique 2D memes based on a background and 4 or more accesory zones. The script loads however many images are in each sub-folder of the Resources folder. It then randomly picks either one texture or no texture from each zone. By having 10 items in each of the 4 zones it is possible to generate 10,000 unique memes.
