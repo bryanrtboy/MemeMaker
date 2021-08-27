@@ -15,7 +15,7 @@ for a certain zone, i.e hat/hair or clothing.
  3. There is no limit to the number of areas, but the m_images and m_paths need to be exactly the same count
  4. All images should be the same size and transparent
  5. Hit play and then the Make All button. Images will be written to the hard drive, depending on your system
- 6. When using the Unity Editor, the images will be by default above the Assets folder inside a folder called 'screenshots'
+ 6. When using the Unity Editor, the screenshots will written to disk above the Assets folder inside a folder called 'screenshots'
 
 This example scene is set to run at 512px X 512px and expects 512px images to make pixel perfect Memes. This can be change to whatever dimension you want by changing the Preview area and Canvas Scaler component.
 
