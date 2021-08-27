@@ -20,3 +20,12 @@ for a certain zone, i.e hat/hair or clothing.
 This example scene is set to run at 512px X 512px and expects 512px images to make pixel perfect Memes. This can be change to whatever dimension you want by changing the Preview area and Canvas Scaler component.
 
 When using a background palette, make sure it's import setting is set to Read/write in Unity.
+
+## Photoshop and Unity Importing
+
+Open the MemesLayers.psd example to see how the layers are created and organized. To export all the layers:
+ 1. Make All the layers visible
+ 2. Use File>Export>Layers To Files with the export all visible option checked and use the transparent .png format
+ 3. Export the base layer and background separately
+ 4. Drag all of your parts into the folders
+ 5. In Unity, make sure they are imported as Default Textures (not Sprites) and check the Alpha is Transparent option
