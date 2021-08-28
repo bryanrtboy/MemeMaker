@@ -9,13 +9,13 @@ If a background and background palette is specified, each meme gets a random bac
 
 This script creates unique images by reading textures from folders located in the Resource folder. Each folder should be
 for a certain zone, i.e hat/hair or clothing.
-
- 1. Drag all of your hair/hat options into the Top folder
+ 1. Drag all of your hair/hat options  into the Top folder
  2. Repeat for every other area
- 3. There is no limit to the number of areas, but the m_images and m_paths need to be exactly the same count
- 4. All images should be the same size and transparent
- 5. Hit play and then the Make All button. Images will be written to the hard drive, depending on your system
- 6. When using the Unity Editor, the screenshots will written to disk above the Assets folder inside a folder called 'screenshots'
+ 3. There is no limit to the number of areas, but the m_images and m_paths need to have the same array length
+ 4. Areas can have different numbers of items, fewer items will appear less often
+ 5. All images should be the same size and transparent
+ 6. Hit play and then the Make All button. Images will be written to the hard drive, depending on your system
+ 7. When using the Unity Editor, the screenshots will written to disk above the Assets folder inside a folder called 'screenshots'
 
 This example scene is set to run at 512px X 512px and expects 512px images to make pixel perfect Memes. This can be change to whatever dimension you want by changing the Preview area and Canvas Scaler component.
 
