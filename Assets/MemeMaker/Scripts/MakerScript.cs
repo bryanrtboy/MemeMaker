@@ -31,6 +31,7 @@ namespace MemeMaker.Scripts
         public string[] m_paths = new string[]{"Top", "MiddleTop","MiddleBottom", "Bottom"};
         [Tooltip("If this and the palette are null, a random background color will be picked from the palette")]
         public RawImage m_background;
+        public RawImage m_floor;
         public Texture2D m_palette;
 
         private List<string> _permutations;
@@ -57,7 +58,7 @@ namespace MemeMaker.Scripts
                 if (_accessories[i].m_textures.Length < 1)
                 {
                     Debug.LogError("You need at lease one texture per folder. If you don't want to use a folder, don't add" +
-                                   " it's name to the m_paths list!");
+                                   " the folder name to the m_paths list!");
                     Destroy(this);
                 }
 
@@ -74,7 +75,7 @@ namespace MemeMaker.Scripts
         {
             for (int i = 0; i < m_images.Length; i++)
             {
-                int rand = UnityEngine.Random.Range(0, _accessories[i].m_textures.Length+1);
+                int rand = UnityEngine.Random.Range(0, _accessories[i].m_textures.Length);
                 MakeAccessory(i,rand);
             }
             if (m_background && m_palette)
@@ -86,9 +87,7 @@ namespace MemeMaker.Scripts
             int maxPossiblePermutations = 1;
             foreach (int i in accessoryCountPerArea)
             {
-                //Add one to the number of accessories, since one option is
-                //to leave this area empty, i.e. 2 hats means 3 options - hat 1, hat 2 or no hat.
-                maxPossiblePermutations *= i+1;
+                maxPossiblePermutations *= i;
             }
 
             return maxPossiblePermutations;
@@ -105,7 +104,7 @@ namespace MemeMaker.Scripts
                 string possiblePermutation = "";
                 for (int i = 0; i < m_images.Length; i++)
                 {
-                    int rand = UnityEngine.Random.Range(0, _accessories[i].m_textures.Length + 1);
+                    int rand = UnityEngine.Random.Range(0, _accessories[i].m_textures.Length);
                     possiblePermutation += rand.ToString();
                 }
 
@@ -152,23 +151,18 @@ namespace MemeMaker.Scripts
 
         void MakeAccessory(int slot, int index)
         {
-            index -= 1;
-            if (index >= 0)
-            {
-                m_images[slot].texture = (Texture2D)_accessories[slot].m_textures[index];
-                m_images[slot].enabled = true;
-            }
-            else
-            {
-                m_images[slot].texture = null;
-                m_images[slot].enabled = false;
-            }
+            m_images[slot].texture = (Texture2D)_accessories[slot].m_textures[index];
         }
 
         void SetBackgroundColor()
         {
             int r = UnityEngine.Random.Range(0, m_palette.width);
             m_background.color = m_palette.GetPixel(r, 0);
+
+            if (m_palette.height <= 1)
+                return;
+            if(m_floor)
+                m_floor.color = m_palette.GetPixel(r, 1);
         }
     }
 
