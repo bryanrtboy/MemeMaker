@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MemeMaker/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/MemeMaker/Scenes/MakerScene.unity
+    guid: d355f3ee5ffa54e16b73b4a64b5fcc15
   m_configObjects: {}
