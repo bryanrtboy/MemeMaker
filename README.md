@@ -21,8 +21,6 @@ This example scene is set to run at 512px X 512px and expects 512px images to ma
 
 When using a background palette, make sure it's import setting is set to Read/write in Unity.
 
-[https://www.youtube.com/watch?v=Sv3P2iZvUGg]
-
 ## Photoshop and Unity Importing
 
 Open the MemesLayers.psd example to see how the layers are created and organized. To export all the layers:
@@ -31,3 +29,6 @@ Open the MemesLayers.psd example to see how the layers are created and organized
  3. Export the base layer and background separately
  4. Drag all of your parts into the folders
  5. In Unity, make sure they are imported as Default Textures (not Sprites) and check the Alpha is Transparent option
+
+##Video Walk through
+[![Video Tutorial](video.jpg)](https://www.youtube.com/watch?v=Sv3P2iZvUGg)
