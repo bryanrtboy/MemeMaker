@@ -30,6 +30,6 @@ Open the MemesLayers.psd example to see how the layers are created and organized
  4. Drag all of your parts into the folders
  5. In Unity, make sure they are imported as Default Textures (not Sprites) and check the Alpha is Transparent option
 
-##Video Walk through
+## Video Walk through
 
 [![Video Tutorial](video.jpg)](https://www.youtube.com/watch?v=Sv3P2iZvUGg)
